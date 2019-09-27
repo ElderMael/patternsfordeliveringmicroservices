@@ -1,0 +1,9 @@
+01-Title.md
+02-Introduction.md
+03-Digital_Platforms.md
+04-Pipelines.md
+05_Graph_Model.md
+06-Project_Kickstarters.md
+07-Microservices_Drift.md
+08-Distributed_Refactoring.md
+09-Delivery_Workflow_Tools.md
