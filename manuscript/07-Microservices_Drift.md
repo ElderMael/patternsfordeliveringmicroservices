@@ -57,3 +57,11 @@ Software dependencies are also a source of drift.
 
 
 ### Delivery Drift
+
+
+
+## Conclusion
+
+This chapter described what is drift on microservices architectures and
+explained the different types of drift and their causes. Patterns to
+drive consolidation and avoid drift were also described.

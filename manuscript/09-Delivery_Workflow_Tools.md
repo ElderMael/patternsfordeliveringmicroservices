@@ -73,3 +73,12 @@ As stated before, Delivery Workflow Tools could potentially be executed
 outside the CI/CD servers helping developers to debug and develop
 easily but it also will help application developers to test their code
 without pushing to the pipeline, accelerating their feedback loop.
+
+
+## Conclusion
+
+This chapter contained a description of Delivery Worflow Tools and how
+this pattern helps on a microservices architecture. It also described
+problems with over reliance of CI/CD servers to automate workflow,
+how the Delivery Workflow Tools create consolidation but still allow
+teams to be autonomous i.e. work independently.
