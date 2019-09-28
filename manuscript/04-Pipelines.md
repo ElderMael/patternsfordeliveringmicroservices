@@ -11,9 +11,12 @@ microservices architecture a single pipeline would mean that there is
 only a single type of services to deploy. This is, of course, false
 in most cases.
 
-The first problem with deploying many microservices is that you will
-need to provision many pipelines, with different instances and
-different definitions according to the type of services.
+The creation of many different microservices implies that there will
+be as many pipelines as there are microservices but in reality some
+microservices will have very similar technology stacks. The first
+problem with deploying many microservices is that you will need to
+provision many pipelines, with different instances and different
+definitions according to the type of services.
 
 The worst possible scenario is that you have a pipeline definition on
 each code repository you have. This would mean that whenever you
@@ -36,13 +39,15 @@ and best practices and makes them available to all the microservices
 in the platform.
 
 This allows delivery of many services faster because in the process of
-creating these templates, the process to production is streamlined and
-becomes the paved road to production.
+creating these templates, the path to production is streamlined and
+becomes a paved road useful for taking application code directly.
 
 The first version of the pipeline template allows to greatly increase
 the delivery speed of microservices across the platforms but it has
-a big trade-off. Templates must be updated to introduce new features
+a big trade-off: templates must be updated to introduce new features
 and policies and safeguards are required due to the new found velocity.
+
+### Versioning Templates
 
 If you always use the latest template automatically, it means that any
 enhancements or fixes are applied automatically across all of the
@@ -63,10 +68,23 @@ submodules to get your build server files. Some CI/CD servers already
 let you share libraries between pipelines and you can point to a
 specific revision of the pipeline.
 
-The tradeoff of pulling the latest pipeline code, as stated before,
-is that it won't allow you to have reproducible builds and will
-possibly break projects that are not ready for using the latest policy
-or features coming from the template.
+### Using Always The Latest Template
+
+Arguably, pipeline code benefits from continuous integration with the
+code it deploys. This prevents pipeline drift because projects take
+the latest pipeline template version the moment it is released.
+
+The tradeoff of pulling the latest pipeline code, is that it won't
+allow you to have reproducible builds and will possibly break projects
+that are not ready for using the latest policy or features coming from
+the template. This can be both good and bad depending on how you want
+to react to this kind of feedback. If a new policy needs to be
+enforced, introducing changes to pipeline templates will force
+developers to take action if the new policy fails the pipeline.
+
+If using the latest pipeline template, rolling forward instead of
+rolling back can be a better strategy to fix errors during the
+integration and deployment process.
 
 ### Gradually Introducing Non-breaking Stages
 

@@ -33,6 +33,8 @@ software development:
 > one data structure than to have 10 functions operate on 10 data
 > structures. As a result the pyramid must stand unchanged for a
 > millenium; the organism must evolve or perish".
+>
+> Structure and Interpretation of Computer Programs
 
 If you do not make change easy, the stagnation will become ossification
 and the microservices will start to rot and crumble. But the price of
@@ -58,3 +60,7 @@ features from being delivered. If this happens on a single service
 probably it is still OK to look for a workaround but in platform
 libraries the introduction of new features could pose a huge delay on
 all the services.
+
+These concerns are always present while delivering microservices to
+production and this book will try to describe patterns seen and
+implemented to tackle them.

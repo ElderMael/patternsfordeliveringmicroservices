@@ -1,5 +1,33 @@
 # Graph Model To Build And Deliver Software
 
+## Why Using Graphs?
+
+A pipeline model can be seen as a series of inputs and outputs.
+Earlier stages give inputs to later stages and the final product, the
+artifact, is taken to different environments and finally, after some
+minor manual intervention, it is deployed to a production environment.
+
+A graph model for delivering software can be seen as a series of events
+triggered that will trigger some kind of processing. An event could be
+a commit on a distributed version-control system (e.g. Git), a specific
+date happening (e.g. ever day, 12 PM). The processing that happens when
+and event occurs can be similar to an stage of a CI/CD pipeline, for
+example, building a binary.
+
+A benefit of the graph model to build and delivery software is that
+it is parallel by default while pipeline stages usually are not.
+Events can trigger multiple processing taks at a time and can be
+audited or even reproduced while most pipeline models and technologies
+rely on webhooks which are usually fire and forget.
+
+Graphs allow flexibility on the type of processing tasks that can be
+triggered at a time and this benefits individual teams to pick or add
+new processing tasks dependind on the event. Pipelines on the other
+hand, are usually prescribed and lack the required flexibility out of
+the box. While this flexibility can be added with some paradigms as
+explained on the Pipelines chapter, it is not the default in most
+CI/CD servers/technologies.
+
 ## Pipelines Vs Graphs
 
 The pipeline pattern to deliver software has been very useful for
@@ -81,3 +109,28 @@ pipeline policy and only trigger messaging warnings. While this can
 be modeled in a pipeline too, the event can make trigger a different
 set of events or be triggered on specific times without triggering the
 complete pipeline.
+
+## Optionally Skip Processing Of Events
+
+On a graph model, event processors can be designed to skip events or
+skip processing after inspecting the event. Event processors can also
+inspect the codebase even if the event they are interested in has been
+triggered.
+
+For example, an event processor interested in building a repository
+binary can skip processing if the event triggered is a git commit
+that did not changed any code e.g. editing the README file of the
+repository had no impact on the code.
+
+This is very useful to avoid wasting processing power usually seen on
+pipelines where any webhook trigger usually means processing all stages
+even when the commit only changed documentation.
+
+
+## Conclusion
+
+A graph model to build and deliver software is beneficial to the
+microservice architecture because it adds the necessary flexibility
+to the paved road model provided by pipelines. It also can provide
+policies as with the pipeline model but giving the individual teams
+power to add or remove tasks as required.
