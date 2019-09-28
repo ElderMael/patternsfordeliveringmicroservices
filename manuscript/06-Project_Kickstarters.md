@@ -69,3 +69,17 @@ features on templates will probably require some degree of
 customization during the code generation. This will require modify
 names, variables or parameters in the project generator itself.
 
+## Pipeline Definitions On Project Kickstarters
+
+## Conclusion
+
+Project kickstarters are a great way to speed up the adoption of a
+microservice architecture. They provide production ready code if
+applied correctly within an organization. Kickstarters also serve as
+reference architecture for developers to use when coding against a
+set of technologies.
+
+The chapter explained some of the possible ways to implement project
+kickstarters and the trade-offs of each implementation. Finally, the
+chapter explained the tightly coupled nature of project kickstarters
+and pipelines.
