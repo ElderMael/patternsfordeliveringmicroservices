@@ -199,3 +199,13 @@ an important step to avoid pipeline drift and the drawbacks it has. The
 trade off of this approach is possibly the ossification of the pipeline
 code as making changes to it may be risky but with DSLs developers
 can regain some control over the pipeline code.
+
+## Conclusions
+
+Pipelines are policy imposed across a microservice architectures and
+keeping them consistent means there will be drift. Some patterns to
+avoid drift and consolidate paved roads to production were presented
+using paradigms such as Convention over Configuration and template
+parameters. More advanced patterns such as DSLs can add flexibility to
+pipelines because microservices will have different needs as they are
+built and deployed.
