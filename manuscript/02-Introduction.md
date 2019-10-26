@@ -5,10 +5,9 @@ software at many levels. I remember working on my first microservice
 project during the times before Kubernetes and in the apogee of the
 Netflix platform implementation.
 
-While I had worked most of my career with JVM related technologies, at
-the time I worked as a front-end developer but on the sidelines I
-helped a friend to deliver a project using the first versions of Spring
-Boot and Netflix integrations.
+While working as a front-end developer, I landed on a project that
+exposed me to my first microservices implementation. This project used
+the Netflix stack to deliver microservices.
 
 From that point of time to the moment of writing these lines I have
 been in various other projects implementing a similar architecture

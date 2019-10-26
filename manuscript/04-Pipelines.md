@@ -184,21 +184,51 @@ template parameters, feature toggles allow you to test the feature
 on live pipelines and observe the behavior or apply them selectively.
 
 
-
 ### DSLs Instead Of Templates
 
 After working for a while with pipeline templates, we started to
 stretch the boundaries of what a template can generate. Removing and
 adding sections to a template and parameterize it enough could become
-very complex over time thus the creation of DSLs on Jenkins for this
-kind of operations has been a good way to introduce the required
-flexibility.
+very complex over time thus the creation of DSLs (Domain Specific
+Languages) on Jenkins for this kind of operations has been a good way
+to introduce the required flexibility.
 
 It's important to note that centralizing policy across organizations is
 an important step to avoid pipeline drift and the drawbacks it has. The
 trade off of this approach is possibly the ossification of the pipeline
 code as making changes to it may be risky but with DSLs developers
 can regain some control over the pipeline code.
+
+DSL for deployment can enforce policy across pipelines but can be
+created to be flexible enough to skip non-required stages. Their
+domain is deployment within the Digital Platform.
+
+## Pipeline Template Antipatterns
+
+### Not Having Integration Tests With Pipeline Templates
+
+A common mistake is to think that pipeline code is different from
+production code. It should be tested and integrated as much as possible
+and preferably with reference architecture applications.
+
+Integration tests are very important for pipeline templates and project
+templates/code generators because they provide feedback about the
+paved road for production i.e. if the integration fails then it means
+that the overall process is broken.
+
+Pipeline code should be tested as any other software. The [practical
+test pyramid][1] is a good gideline to test pipeline templates and
+the integrations with project generators. Ideally, while the pipeline
+will have more unit tests than integration tests, the integration
+tests may need to generate more than one type of project archetype
+or template. Parallelizing is key to get the feedback faster if any
+type of project fails.
+
+Project generators should have pipeline template projects as upstream
+dependencies so that when a new pipeline version comes out, it will
+automatically trigger project generator tests to integrate with it. If
+these tests fail, it may signal that the new version of the pipeline
+might have problems integrating with the current generator version.
 
 ## Conclusions
 
@@ -209,3 +239,5 @@ using paradigms such as Convention over Configuration and template
 parameters. More advanced patterns such as DSLs can add flexibility to
 pipelines because microservices will have different needs as they are
 built and deployed.
+
+[1]: https://martinfowler.com/articles/practical-test-pyramid.html

@@ -53,6 +53,8 @@ they become an excellent way to bootstrap new business capabilities
 right away and have them deployed in a matter of minutes with little
 or no manual modifications.
 
+### Transform Projects Instead Of Templating
+
 A pattern that comes from project generators is that they should
 transform projects instead of using template engines to produce them.
 
@@ -69,7 +71,32 @@ features on templates will probably require some degree of
 customization during the code generation. This will require modify
 names, variables or parameters in the project generator itself.
 
-## Pipeline Definitions On Project Kickstarters
+## Generator Pitfalls
+
+### Coupling With Pipeline Templates
+
+Project generators using paved road pipeline templates usually couple
+their lifecycle. This is because when releasing new versions of the
+pipeline, project generators do require an update too to get the
+benefits of the change.
+
+Unless using always the latest version of the pipeline template, this
+represents an opportunity for automation because releasing new
+pipeline template versions should automatically propagate to generators
+if many projects are created/updated frequently.
+
+### Updating Already Existing Projects
+
+Even though generators are a good way to kickstart project, modifying
+existing projects is also a valuable task. Different technologies
+allow this such as Yeoman or Atomist. The problem is when the delta
+of creating the new project and the existing project varies too much
+as this will make updating new projects difficult.
+
+Modularizing the codebase could allow introducing and updating features
+quickly. Microlibs are a good example of modularization that can be
+updated easily as generators or distributed refactoring can update
+the new version and maybe do a slight modification to configuration.
 
 ## Conclusion
 

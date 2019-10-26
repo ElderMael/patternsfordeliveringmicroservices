@@ -49,14 +49,44 @@ existing projects.
 
 ### Configuration Drift
 
-
+Having many services share configurations is a situation common while
+deploying microservices. Sharing settings such as URLs of core
+services or certificates created configuration drift when they require
+updates.
 
 ### Versioning Drift
 
-Software dependencies are also a source of drift.
+Software dependencies are also a source of drift. Library versions and
+container base images are one of the main sources of drift within a
+microservices deployment.
 
+Keeping any type of dependency up to date is a task that is unavoidable
+from a security perspective because sooner or later vulnerabilites are
+discovered. 
 
 ### Delivery Drift
+
+While some services might be changed more often than others, the code
+that deploys these services is also being integrated every day to
+accomodate policies accross the platform. With enough time, if
+pipelines are not kept up to date, some services won't be deployable
+anymore.
+
+Deployment code usually lives within the repositories of each
+microservice and needs to be updated to avoid ossification i.e. the
+inability to deploy or pass construction stages.
+
+## Driving Change Can Be Overwhelming
+
+Consolidation of the three type of Drift through governance is a good
+starting point to drive change within all the microservices but quickly
+becomes unwielding.
+
+Security scans are an example of tools that alert developers when
+change is required but alerting can become an overwhelming strategy
+if it comes from many directions and repeating too frequently such
+as when there are many microservices sharing common dependencies such
+as frameworks or libraries.
 
 
 

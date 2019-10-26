@@ -67,12 +67,41 @@ of existing build automation systems to avoid duplicating steps on
 pipelines such as dependency installations or creating container images
 depending on the project type e.g. gradle projects, maven, npm, etc.
 
+When platform project generators have many similar archetypes or types
+of projects then investing into abstractions over technology stacks
+allows developers to use the best tool for the job and Delivery
+Workflow Tools can help this kind of diversification of the tech stack.
+
 ## Avoiding Over Dependency On CI/CD Servers
 
 As stated before, Delivery Workflow Tools could potentially be executed
 outside the CI/CD servers helping developers to debug and develop
 easily but it also will help application developers to test their code
 without pushing to the pipeline, accelerating their feedback loop.
+
+While CI/CD servers act quickly on new source code commits, testing
+a task locally is paramount because this can help resolve problems
+with the task without commiting code only to debug the CI/CD pipelines.
+
+## Pitfalls Of Delivery Workflow Tools
+
+### Keeping Parity Between Tool Tasks And Pipeline Stages
+
+It's tempting to make Delivery Workflow Tools execute with a single
+command what a pipeline stage does at the beggining. If relying on a
+CI/CD server too much proves difficult to test, then encapsulating or
+extracting entire stages at a time from the pipeline to the tool seems
+like a simple task but the problem comes when stages have to change
+frequently or are not small enough.
+
+For example, a stage for deploying artifacts to staging environments
+may be easy to extract but different application archetypes may need
+different tasks executed before and after the stage but nonetheless
+are in the same stage definition in the pipeline.
+
+A good way to extract Delivery Workflow Tools is to start with common
+tasks within stages such as building artifacts and packaging them into
+container images.
 
 
 ## Conclusion
