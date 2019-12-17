@@ -271,6 +271,13 @@ required tools for any type of application is usually easier to
 maintain over time instead of multiple docker images/virtual machines
 for each specialized stack.
 
+Benefits of this approach is less points of contact when updating tools
+required to build microservices, a one-time setup of such tools and
+possibly the benefit of only transfering once a docker/virtual machine
+image so you only pay the price once for modyfing it, less operational
+and cognitive overhead when resolving issues regarding configuration
+or provisioning.
+
 
 ## Conclusions
 
