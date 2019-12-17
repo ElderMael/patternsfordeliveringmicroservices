@@ -29,3 +29,12 @@ This is when I started my research on tools and patterns that I have
 used over the years to allow adoption of the microservices paradigm
 and at the same time, give developers enough tools to work confidently
 on their own services without cluttering their job with platform code.
+
+Over these years, I have seen the same problems appear again and again.
+From the explosion of projects being delivered by dozens of pipeline
+that in reality are only a couple to the necessity of creating
+templates for each microservice type because cloning already existing
+projects and modyfing them by hand is very error prone. These problems
+occur on every project in which I have started from scratch and
+sometimes they appear over time when the Digital Platform reaches some
+maturity.
