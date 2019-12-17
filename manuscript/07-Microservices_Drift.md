@@ -62,7 +62,7 @@ microservices deployment.
 
 Keeping any type of dependency up to date is a task that is unavoidable
 from a security perspective because sooner or later vulnerabilites are
-discovered. 
+discovered.
 
 ### Delivery Drift
 
@@ -88,10 +88,10 @@ if it comes from many directions and repeating too frequently such
 as when there are many microservices sharing common dependencies such
 as frameworks or libraries.
 
-
-
 ## Conclusion
 
 This chapter described what is drift on microservices architectures and
 explained the different types of drift and their causes. Patterns to
-drive consolidation and avoid drift were also described.
+drive consolidation and avoid drift were also described. The chapter
+about Distributed Refactoring will follow on this topic and how to
+tackle this problem.

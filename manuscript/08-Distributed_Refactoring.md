@@ -1,13 +1,19 @@
 # Distributed Refactoring To Ease Drift
 
-## Measure Drive Behavior
+Microservices made the monolith crumble into many different services,
+but with this division many cross-cutting concerns that were in the
+same codebase now require to interact with more codebases at the same
+time possibly creating duplication and drift. This chapter will
+describe ways to discover the state of the codebases and drift along
+techniques and patterns to tackle these problems.
+
+## Measure Drift To Drive Consolidation
 
 The first recommended step to drive convergence is to measure Drift.
 But drift is an all-encompassing concept that is also very hard to
 measure if you do not divide it on various types of drift.
 
-Here are some of the types of drift that are usual on microservices
-architectures regarding platform development.
+### Measure Configuration Drift
 
 
 ## Conclusion
