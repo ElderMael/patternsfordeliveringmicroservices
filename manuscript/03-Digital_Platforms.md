@@ -9,7 +9,7 @@ business domain but regardless you will need supporting software to
 run the application code, deploy the required artifacts and
 orchestrate the required components.
 
-Nowadays, the de facto standard for microservice deployment is
+Nowadays, the de facto standard for microservice deployments is
 Kubernetes. Before the advent of Kubernetes we had virtual machines
 and we used other orchestrators to manage the required infrastructure
 for deployment and monitoring applications.
