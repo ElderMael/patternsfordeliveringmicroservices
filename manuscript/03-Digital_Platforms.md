@@ -18,7 +18,10 @@ The technology choice of orchestration for containers or virtual
 machines, while important, is not the entire picture. You still need
 concensus on other aspects of the Digital Platform such as the way
 services authenticate with each other, log aggregation, monitoring,
-tracing, deployment workflows, etc.
+tracing, deployment workflows, etc. These are characteristics or
+features of the Digital Platform that allow microservices to be
+deployed faster because they solve cross-cutting concerns across the
+enterprise.
 
 With the advent of DevOps, great advances in the way Digital Platforms
 are created and the practices around deploying microservices have made
