@@ -230,6 +230,48 @@ automatically trigger project generator tests to integrate with it. If
 these tests fail, it may signal that the new version of the pipeline
 might have problems integrating with the current generator version.
 
+
+### Tooling Explosion With Build Agents
+
+Working with pipeline templates implies a set of technologies used by
+different microservices i.e. the Digital Platform. These technologies,
+usually called stack, will be used by the CI/CD server to build
+different microservices thus usually they are installed on virtual
+machines or any agent in charge of building the required artifacts.
+
+A common problem arises when trying to provision these tools into
+very small agents or try to specialize such agents too narrowly. For
+example, if you require to build front-end and backend applications
+with different technology stacks, most likely the first implementation
+will create two different agents with separate tooling.
+
+This choice poses two problems. First is that there is always overlap
+over the tools regardless of the platform. Examples of these tools
+are version control, security scanners, code analysis, etc. Because of
+this overlap, you will have duplication whenever you decide to build
+different applications.
+
+The second problem occurs is when a new technology stack needs to be
+supported. This also requires duplication because most of the tools
+and steps will be reused or are required for compliance.
+
+This duplication means that when a tool needs to be updated or
+modified it will invariably be done on two or more different places and
+this generates overhead over time as the platform adopts a myriad of
+required tools. Every stack agent will have duplicated provisioning
+efforts.
+
+One of the solutions to this problem is to consolidate as many tools
+as possible under a single agent. Even all the platform tools to
+build microservices could be set up into a single spot.
+
+For example, having worked with many different Jenkins setups and
+dockerized CI/CD solutions, building a single agent with all the
+required tools for any type of application is usually easier to
+maintain over time instead of multiple docker images/virtual machines
+for each specialized stack.
+
+
 ## Conclusions
 
 Pipelines are policy imposed across a microservice architectures and
