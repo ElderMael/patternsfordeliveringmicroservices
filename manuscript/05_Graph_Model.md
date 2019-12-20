@@ -126,6 +126,16 @@ This is very useful to avoid wasting processing power usually seen on
 pipelines where any webhook trigger usually means processing all stages
 even when the commit only changed documentation.
 
+## Tradeoff
+
+### Traceability Becomes Hard
+
+Correlating events that trigger builds and deployments or releases
+becomes troublesome when not everything is concentrated on a pipeline
+definition and a server displaying the results. Event correlation can
+be achieved by creating or using custom tools that keep the logs of
+such events and their outcomes.
+
 
 ## Conclusion
 
