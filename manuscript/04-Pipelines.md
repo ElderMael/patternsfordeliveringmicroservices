@@ -86,6 +86,13 @@ If using the latest pipeline template, rolling forward instead of
 rolling back can be a better strategy to fix errors during the
 integration and deployment process.
 
+A possible option to avoid the breakage of introducing new features or
+policies is to gradually introduce warnings instead of failing the
+whole pipeline and gradually allow developers to accomodate new
+policies. Of course, this depends on the organization maturity. Further
+on the chapter there is a section to introduce these policies or
+features using feature toggles.
+
 ### Gradually Introducing Non-breaking Stages
 
 Pipelines are policy. They are usually the means to enforce
@@ -183,6 +190,13 @@ releasing them to all the teams. While this could be introduced using
 template parameters, feature toggles allow you to test the feature
 on live pipelines and observe the behavior or apply them selectively.
 
+Feature toggles can be activated even without parameters using also
+convention over configuration. For example, I once had to implement
+multi-cluster deployments. Instead of changing the way that the
+current deployment process worked, I simply inspectioned the
+repository for a configuration file and then use a different pipeline
+code to read the file contents and deploy to the clusters specified
+there instead of the default one.
 
 ### DSLs Instead Of Templates
 
