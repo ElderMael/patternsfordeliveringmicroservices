@@ -231,7 +231,7 @@ these tests fail, it may signal that the new version of the pipeline
 might have problems integrating with the current generator version.
 
 
-### Tooling Explosion With Build Agents
+### Having Different Build Agents For Each Build Tool
 
 Working with pipeline templates implies a set of technologies used by
 different microservices i.e. the Digital Platform. These technologies,
