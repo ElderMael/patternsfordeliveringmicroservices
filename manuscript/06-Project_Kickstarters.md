@@ -22,6 +22,11 @@ Software architects can dictate microservice tooling and technology
 stacks using project kickstarters as references and prove that they
 are suitable for the platform.
 
+The benefits of using project templates as reference architecture is
+that they avoid having different teams solving the same problems many
+times. They provide a common vocabulary and technology stack for
+new microservices to use.
+
 ## Project Templates
 
 When the first microservices are deployed they are green field projects
