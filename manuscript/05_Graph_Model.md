@@ -75,8 +75,8 @@ resulting artifacts from the CI pipeline.
 
 If you model the previous example with a graph, the first event that
 happens might be a commit on git. Everything from there can be
-parallelized until the creation of the required container images.
-Compiling, testing, security scanning, linting, etc.
+parallelized until the creation of the required container images,
+compiling, testing, security scanning, linting, etc.
 
 A new event can be created that will promote the container image from
 all of the required environments without having to have a pipeline
