@@ -119,7 +119,11 @@ Because microservices are an instance of an evolutionary architecture,
 created projects will quickly get out of date regarding cross-cutting
 concerns made available by the platform.
 
-
+For example, if the platform provides new ways to authenticate
+between services or users it will probably won't be added to the
+project kickstarter until it is fully developed. The same will happen
+with the project generators. This drift between the new architecture
+and its reference reflects the problem of drift on microservices.
 
 Further on this book, a whole chapter is dedicated to this topic.
 
