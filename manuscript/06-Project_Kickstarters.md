@@ -100,7 +100,7 @@ represents an opportunity for automation because releasing new
 pipeline template versions should automatically propagate to generators
 if many projects are created/updated frequently.
 
-### Updating Already Existing Projects
+### Drift
 
 Even though generators are a good way to kickstart project, modifying
 existing projects is also a valuable task. Different technologies
@@ -112,8 +112,6 @@ Modularizing the codebase could allow introducing and updating features
 quickly. Microlibs are a good example of modularization that can be
 updated easily as generators or distributed refactoring can update
 the new version and maybe do a slight modification to configuration.
-
-### Drift
 
 Because microservices are an instance of an evolutionary architecture,
 created projects will quickly get out of date regarding cross-cutting
