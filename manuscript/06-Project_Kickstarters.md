@@ -113,6 +113,16 @@ quickly. Microlibs are a good example of modularization that can be
 updated easily as generators or distributed refactoring can update
 the new version and maybe do a slight modification to configuration.
 
+### Drift
+
+Because microservices are an instance of an evolutionary architecture,
+created projects will quickly get out of date regarding cross-cutting
+concerns made available by the platform.
+
+
+
+Further on this book, a whole chapter is dedicated to this topic.
+
 ## Conclusion
 
 Project kickstarters are a great way to speed up the adoption of a
