@@ -1,6 +1,6 @@
 # Continuous Delivery Pipelines
 
-Nowadays, Continuous Delivery Pipelines are accepted as the one true
+Continuous Delivery Pipelines are accepted as the one true
 way of delivering software by many developers. They provide faster
 feedback cycles while building, testing and deploying applications
 thus they were adopted widely on the industry during the emergence of
