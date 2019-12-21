@@ -191,7 +191,16 @@ definition, a specific file in the repository with key-value pairs
 that can be read during build time, environment variables, etc.
 
 Typical parameters are application names for creating kubernetes
-resources with such metadata. These kind of parameters allow pipelines
+resources with such metadata.
+
+
+#### Template Parameters As Extensions
+
+If the pipeline definition is a fully fledge programming language,
+template parameters can be callbacks or funtions that could be executed
+at certain points of the execution of the pipeline. Examples of these
+are tasks to be run before or after the execution of a particular
+step to customize the result or react to its output.
 
 #### Feature Toggles
 
