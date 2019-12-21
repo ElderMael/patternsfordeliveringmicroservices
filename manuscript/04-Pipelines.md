@@ -206,7 +206,7 @@ on live pipelines and observe the behavior or apply them selectively.
 Feature toggles can be activated even without parameters using also
 convention over configuration. For example, I once had to implement
 multi-cluster deployments. Instead of changing the way that the
-current deployment process worked, I simply inspectioned the
+current deployment process worked, I simply inspected the
 repository for a configuration file and then use a different pipeline
 code to read the file contents and deploy to the clusters specified
 there instead of the default one.
