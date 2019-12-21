@@ -127,21 +127,34 @@ types of errors such as Slack notifications.
 
 The saying goes that when you only have a hammer at hand, every problem
 starts to look like a nail. This is a fantastic analogy for pipelines
-nowadays. The only possible action that most developers think of when
+because the only possible action that most developers think of when
 a stage fails is to fail the entire build.
 
 Failing the build may look like the only way to provide feedback to
 developers but it's not. For example, notifications for fixing minor
-linting details should be a better option. Also, Marking some stages
-as totally optional is also a valid option i.e. have stages that run
-certain tools and only are there for checking the results instead of
-failing the pipeline.
+linting details should be a better option because they are less
+disruptive to their workflow. Also, Marking some stages totally
+optional is also a valid option i.e. have stages that run certain tools
+and only are there for checking the results instead of failing the
+pipeline.
 
 Pipeline stages can also provide information through other means such
 as messaging notifications for warnings about tools that not
 necessarily mean failure of a build. A common pattern is to notify
 the developer that created a commit of such warnings directly through
 notifications or emails.
+
+### Linters And Autofixers
+
+Linting code to keep codebases consistent and free of small errors is
+among the most common steps on Continuous Integration pipelines and
+these usually fail the pipeline if errors are detected. While the
+argument of having consistent stylistic codebases and detect small
+errors is arguably good, opinionated and automated code formatting
+could be better.
+
+If possible, adding autofixers instead of failing the pipeline saves
+developers roundtrips to the CI/CD server.
 
 ## Pipeline Template Flexibility
 
