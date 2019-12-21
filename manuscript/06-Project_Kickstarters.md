@@ -20,7 +20,9 @@ kept up to date with the latest developments.
 
 Software architects can dictate microservice tooling and technology
 stacks using project kickstarters as references and prove that they
-are suitable for the platform.
+are suitable for the platform through research and implementation. This
+implies that the patterns and research works with the current Digital
+Platform without clashing with its design.
 
 The benefits of using project templates as reference architecture is
 that they avoid having different teams solving the same problems many
@@ -29,16 +31,24 @@ new microservices to use.
 
 ## Project Templates
 
-When the first microservices are deployed they are green field projects
+Over most microservice platforms, when the first microservices are
+deployed they are green field projects
 and they evolve along the tools and pipelines that work in tandem to
-provision them to platforms such as Kubernetes or AWS AMIs. These
-projects usually are hand crafted and developers pour all the best
-practices they know and can be utilized.
+provision them to platforms such as Kubernetes or Cloud Virtual Machine
+Templates. These projects usually are hand crafted and developers pour
+all the best practices they know and can be utilized.
 
 Eventually, these projects  need to be duplicated in order to create
 more and more microservices. The duplication is also usually done by
 hand too. This is an error prone task because many things have to be
-changed and the possibility of making mistakes happen.
+changed and the possibility of making mistakes happen whenever the
+structure of a template has to change.
+
+Examples of these errors are innumerable: changing package structures
+usually break dependency injection, renaming certain files or classes
+breaking configurations that depend on those fully qualified names,
+requiring to change database URLs (because sharing databases is a
+no-no on any microservice deployment).
 
 Unfortunately, project templates do not avoid the pain of having to
 modify things to create a new service without errors and manual
