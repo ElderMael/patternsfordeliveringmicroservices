@@ -2,7 +2,7 @@
 
 The microservices architecture pattern has changed the way we create
 software at many levels. I remember working on my first microservice
-project during the times before Kubernetes and in the apogee of the
+project during the times before Kubernetes, on the apogee of the
 Netflix platform implementation.
 
 While working as a front-end developer, I landed on a project that
