@@ -11,8 +11,9 @@ the Netflix stack to deliver microservices.
 
 From that point of time to the moment of writing these lines I have
 been in various other projects implementing a similar architecture
-style but different implementing technologies and also working on
-different positions.
+style but using different technologies and also working on
+other positions positions such as infrastructure, backend and platform
+developer.
 
 While I can say that I matured as a developer during the monolith era
 of the early 2000's, I think my most challenging projects were the
