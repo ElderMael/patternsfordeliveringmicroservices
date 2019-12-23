@@ -47,6 +47,39 @@ the delivery speed of microservices across the platforms but it has
 a big trade-off: templates must be updated to introduce new features
 and policies and safeguards are required due to the new found velocity.
 
+### Benefits
+
+Rather than presenting pipeline templates as solutions to deduplication
+only, here are the benefits we provide.
+
+#### Faster Deployment To Production
+
+By having a microservice team remove the guessing from deployment to
+production, the paved road approach of the pipeline template will allow
+any compliant codebase to quickly deploy to production.
+
+For many organizations the benefit of quick experimentation will allow
+faster Research and Development. This is also a benefit of the
+microservice architecture because it is easier to release smaller
+codebases but the cost increases with the number of microservices that
+need to be put on production.
+
+The benefit here is that pipeline templates allow newer microservices
+to quickly catch up with already released ones without as long as they
+are compliant of the policies stablished by the pipeline template.
+
+#### Widespread Policy Enforcement
+
+Microservices depending on the pipeline templates can be enforced to
+comply with newer policies defined on pipeline templates. This is a
+huge benefit because the organization can quickly adopt required
+policies. While breaking pipelines might seem extreme, some policies
+may require this kind of enforcement.
+
+Optional policies can also be upgraded to required while allowing teams
+to comply if the pipeline steps are only warnings instead of failing
+the pipeline.
+
 ### Versioning Templates
 
 If you always use the latest template automatically, it means that any
@@ -314,6 +347,26 @@ image so you only pay the price once for modyfing it, less operational
 and cognitive overhead when resolving issues regarding configuration
 or provisioning.
 
+## Downsides
+
+While pipeline templates might seem like having a lot of advantages.
+They also provide disadvantages as with any type of policy enforcement.
+Pipeline templates might not suffice for all cases or might need to
+hold deployments of certain features until they catch up.
+
+### Centralized Operational Complexity
+
+As with any type of integrating software, pipeline templates for
+microservices can cause problems on all microservices at once if they
+are not released carefully. This is because they do integrate with
+the codebases they release.
+
+Feature flags and new steps issuing warnings instead of breaking the
+pipeline are useful tools to avoid platform-wide breakage. This is also
+an issue when tools enforced by the pipeline templates are broken.
+Consider a third party security scan that requires to communicate with
+the [National Vulnerability Database][2]. If the NVD fails, all
+pipelines depending on this tooling will also fail.
 
 ## Conclusions
 
@@ -326,3 +379,4 @@ pipelines because microservices will have different needs as they are
 built and deployed.
 
 [1]: https://martinfowler.com/articles/practical-test-pyramid.html
+[2]: https://nvd.nist.gov/
