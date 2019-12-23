@@ -86,6 +86,22 @@ features on templates will probably require some degree of
 customization during the code generation. This will require modify
 names, variables or parameters in the project generator itself.
 
+Typical flow of a project generator I have implemented is:
+
+1. Clone base architecture project
+1. Remove version control files (make it a new project)
+1. Apply common transformations
+   1. Rename required files
+   1. Replace project name or references
+   1. Replace configuration according to parameters
+   1. Replace code references
+1. Remove unneeded features
+   1. Remove related code
+   1. Remove related configurations
+1. Test new application builds correctly with build automation system
+1. Push new project to source control
+1. Trigger build pipeline and wait for lower environment deployment
+
 ### Generator Downsides And Tradeoffs
 
 #### Coupling With Pipeline Templates
