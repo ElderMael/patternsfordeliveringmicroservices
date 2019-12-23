@@ -86,9 +86,9 @@ features on templates will probably require some degree of
 customization during the code generation. This will require modify
 names, variables or parameters in the project generator itself.
 
-## Generator Pitfalls
+### Generator Downsides And Tradeoffs
 
-### Coupling With Pipeline Templates
+#### Coupling With Pipeline Templates
 
 Project generators using paved road pipeline templates usually couple
 their lifecycle. This is because when releasing new versions of the
@@ -100,7 +100,7 @@ represents an opportunity for automation because releasing new
 pipeline template versions should automatically propagate to generators
 if many projects are created/updated frequently.
 
-### Drift
+#### Drift
 
 Even though generators are a good way to kickstart project, modifying
 existing projects is also a valuable task. Different technologies
