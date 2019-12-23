@@ -102,6 +102,17 @@ Typical flow of a project generator I have implemented is:
 1. Push new project to source control
 1. Trigger build pipeline and wait for lower environment deployment
 
+##### Modularize Reference Architecture Early
+
+Per the flow of a project generator, it's important to modularize
+features in order to remove them without recurring to
+[shotgun surgery][1] i.e. removing features by touching many code units
+scattered across several source code files. Ideally, when a feature
+is introduced to a reference architecture project, it should be
+contained within a obviously apparent set of files such as a package
+or a directory if the programming language does not use namespaces
+for classes.
+
 ### Generator Downsides And Tradeoffs
 
 #### Coupling With Pipeline Templates
@@ -153,3 +164,5 @@ The chapter explained some of the possible ways to implement project
 kickstarters and the trade-offs of each implementation. Finally, the
 chapter explained the tightly coupled nature of project kickstarters
 and pipelines.
+
+[1]: https://en.wikipedia.org/wiki/Shotgun_surgery
