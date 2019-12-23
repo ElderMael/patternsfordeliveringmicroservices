@@ -368,6 +368,19 @@ Consider a third party security scan that requires to communicate with
 the [National Vulnerability Database][2]. If the NVD fails, all
 pipelines depending on this tooling will also fail.
 
+### Backward Compatibility Problems
+
+Sharing pipeline integration code with many databases requires
+different techniques to support older codebases from ossification i.e.
+being unable to pass the pipeline stages due to newer stages requiring
+new policies to be applied.
+
+Keeping backward compatibility with older codebases might not be a
+good idea but it will require well maintained microservices. Versioning
+pipelines will also require versioning of build agents because
+reproducible builds will require tools to be kept locked at a certain
+version to work.
+
 ## Conclusions
 
 Pipelines are policy imposed across a microservice architectures and
