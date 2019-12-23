@@ -381,6 +381,10 @@ pipelines will also require versioning of build agents because
 reproducible builds will require tools to be kept locked at a certain
 version to work.
 
+As with any versioning problem, there are strategies to work around
+these problems such as semantic versioning or trunk based-development
+templates that can be rolled forward.
+
 ## Conclusions
 
 Pipelines are policy imposed across a microservice architectures and
