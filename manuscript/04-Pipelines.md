@@ -154,7 +154,7 @@ to a pipeline with a required style check is prone to failure. If this
 step could only generate a warning that developers could see in a
 build monitor then it won't surprise them but will still have an
 effect. Of course, there are many ways to notify developers of these
-types of errors such as Slack notifications.
+types of errors such as notifications.
 
 ### _Not_ Failing Pipelines On Every Problem
 
