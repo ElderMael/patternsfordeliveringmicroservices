@@ -126,7 +126,7 @@ This is very useful to avoid wasting processing power usually seen on
 pipelines where any webhook trigger usually means processing all stages
 even when the commit only changed documentation.
 
-## Tradeoff
+## Tradeoffs
 
 ### Traceability Becomes Hard
 

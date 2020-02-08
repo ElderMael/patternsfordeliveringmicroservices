@@ -7,6 +7,22 @@ time possibly creating duplication and drift. This chapter will
 describe ways to discover the state of the codebases and drift along
 techniques and patterns to tackle these problems.
 
+## Typical Drift Scenario
+
+The most common scenario for microservice drift is any form of shared
+library. In the chapter about Pipelines you can find that paved road
+to production pipelines are very useful to standarize microservices
+deployments. But they come with drawbacks such as Drift. Over time,
+pipeline versions pinned to each microservice will start to differ
+unless you are on a tag pointing always to latest.
+
+Once the shared pipeline library starts to incorporate more features,
+services that stay on a particular version won't be deployable over
+time. For example, if the pipeline introduced security scanning, many
+projects will fail the first time or eventually if they do not update
+their dependencies due to new security vulnerabilities. This is a
+form of _distributed technical debt_.
+
 ## Measure Drift To Drive Consolidation
 
 The first recommended step to drive convergence is to measure Drift.
