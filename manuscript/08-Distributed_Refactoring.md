@@ -14,7 +14,14 @@ The first recommended step to drive convergence is to measure Drift.
 But drift is an all-encompassing concept that is also very hard to
 measure if you do not divide it on various types of drift.
 
+### Measure Shared Libraries Drift
+
+
+
+
 ### Measure Configuration Drift
+
+### Measure Delivery Drift
 
 
 ## Conclusion
@@ -23,5 +30,3 @@ The chapter described the reasoning to apply distributed refactoring
 and how to measure drift to drive consolidation. The chapter also
 explained some of the tools available to apply distributed refactoring
 to existing codebases.
-
-[1]: https://en.wikipedia.org/wiki/Single_responsibility_principle

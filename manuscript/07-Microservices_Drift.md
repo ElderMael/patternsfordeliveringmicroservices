@@ -106,11 +106,19 @@ deploying microservices. Sharing settings such as URLs of core
 services or certificates created configuration drift when they require
 updates.
 
-### Versioning Drift
+### Shared Library Drift
 
 Software dependencies are also a source of drift. Library versions and
 container base images are one of the main sources of drift within a
 microservices deployment.
+
+Shared libraries on microservices architectures are usually libraries
+implementing cross-cutting concerns on the platform. Typical examples
+are metric exposition, tracing, logging, etc.
+
+Development of these libraries is usually developed by teams such as
+platform engineering or developer productivity teams to help all
+teams to implement a unified solution to common problems.
 
 Keeping any type of dependency up to date is a task that is unavoidable
 from a security perspective because sooner or later vulnerabilites are
@@ -124,9 +132,10 @@ accomodate policies accross the platform. With enough time, if
 pipelines are not kept up to date, some services won't be deployable
 anymore.
 
-Deployment code usually lives within the repositories of each
-microservice and needs to be updated to avoid ossification i.e. the
-inability to deploy or pass construction stages.
+Unless the delivery tool is configured externally, deployment code
+usually lives within the repositories of each microservice and needs
+to be updated to avoid ossification i.e. the inability to deploy or
+pass construction stages.
 
 ## Driving Change Can Be Overwhelming
 
