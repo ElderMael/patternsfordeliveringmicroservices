@@ -137,6 +137,17 @@ usually lives within the repositories of each microservice and needs
 to be updated to avoid ossification i.e. the inability to deploy or
 pass construction stages.
 
+> At some point I have heard the word "ossification" as a way to
+> describe the inability to deploy/deliver software through a
+> pipeline over time. This means software is broken and it won't be
+> able to be delivered due to a fracture in the way it is delivered.
+>
+> This concept coming from biology is the process  of creating new
+> tissue during fracture healing. You can kind of relate the process
+> of adding new features to the delivery pipeline as fracturing and
+> a state of inability to deploy as ossification. You need to apply
+> therapy (fixes) in order to keep the movility of the broken part.
+
 ## Driving Change Can Be Overwhelming
 
 Consolidation of the three type of Drift through governance is a good
