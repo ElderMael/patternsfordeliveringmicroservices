@@ -7,3 +7,4 @@
 07-Microservices_Drift.md
 08-Distributed_Refactoring.md
 09-Delivery_Workflow_Tools.md
+10-Managing_Dependencies.md
