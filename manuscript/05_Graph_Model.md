@@ -136,6 +136,11 @@ definition and a server displaying the results. Event correlation can
 be achieved by creating or using custom tools that keep the logs of
 such events and their outcomes.
 
+Nonetheless, separating construction, deployment and delivery on
+microservices (or any software for that matter) still mandates that
+you have a way to trace where artifacts come from and approvals for
+deployment and delivery.
+
 
 ## Conclusion
 
