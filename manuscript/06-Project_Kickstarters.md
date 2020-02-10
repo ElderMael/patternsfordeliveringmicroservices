@@ -95,7 +95,7 @@ Typical flow of a project generator I have implemented is:
    1. Replace project name or references
    1. Replace configuration according to parameters
    1. Replace code references
-1. Remove unneeded features
+1. Remove unnecessary features
    1. Remove related code
    1. Remove related configurations
 1. Test new application builds correctly with build automation system
