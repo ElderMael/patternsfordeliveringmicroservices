@@ -30,7 +30,7 @@ rudimentary ways to test pipelines without instantiate a test pipeline.
 
 ## Why Not Stick To CI/CD Scripting?
 
-The most significat trade-off observed is that the loss of testability
+The most significant trade-off observed is that the loss of testability
 of the pipeline code. While many servers allow some kind of plugin
 architecture or directly embedding shell scripts into tasks, they do
 not provide very mature tools to test each step, stage or pipeline.
