@@ -12,6 +12,17 @@ business domain but regardless you will need supporting software to
 run the application code, deploy the required artifacts and
 orchestrate the required components.
 
+A digital platform usually consists of:
+
+1. A Cloud Provider
+1. An Orchestrator
+1. Runtime Environments
+
+A cloud provider will allow the creation of compute resources (virtual
+machines or containers) that the orchestrator will manage. Usually
+the compute resources will execute a runtime environment allowing
+applications to execute within the platform.
+
 Nowadays, the de facto standard for microservice deployments is
 Kubernetes. Before the advent of Kubernetes we had virtual machines
 and we used other orchestrators to manage the required infrastructure
