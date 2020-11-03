@@ -37,6 +37,19 @@ features of the Digital Platform that allow microservices to be
 deployed faster because they solve cross-cutting concerns across the
 enterprise.
 
+A Digital Platform also consists of cross-cutting concerns that apply
+to most, if not all, of the microservices deployed. These concerns
+are important pieces of the platform that allow microservices to
+implement functionality outside of business logic but important for
+long term stability and create concensus between teams. Examples of
+these concerns are:
+
+* Observability
+* Authorization and Authentication
+* Traceability
+* Auditability
+* Logging
+
 ## Drift
 
 With the advent of DevOps, great advances in the way Digital Platforms
