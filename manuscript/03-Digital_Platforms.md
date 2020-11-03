@@ -1,5 +1,8 @@
 # Digital Platforms, Microservices And Their Challenges
 
+
+## What Is A Digital Platform
+
 The foundation of a microservices architecture is a Digital Platform.
 A Digital Platform is the set of technologies that function as the
 context in which the microservices run.
@@ -23,14 +26,19 @@ features of the Digital Platform that allow microservices to be
 deployed faster because they solve cross-cutting concerns across the
 enterprise.
 
+## Drift
+
 With the advent of DevOps, great advances in the way Digital Platforms
 are created and the practices around deploying microservices have made
 a lot of progress but there are still gaps I have identified during
 each one of the projects I have worked on.
 
-These gaps are usually around properly managing drift. The nature of
-software is organic and quoting one of the most iconic books on
-software development:
+These gaps are usually around properly managing drift. If there is a
+theme on this book, it would be Drift and how it makes very difficult
+to work on evolutionary architectures such as microservices.
+
+The nature of software is organic and quoting one of the most iconic
+books on software development:
 
 > It is better to have 100 functions operate on
 > one data structure than to have 10 functions operate on 10 data
